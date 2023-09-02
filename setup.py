@@ -20,6 +20,5 @@ setuptools.setup(
         # 'Say Thanks!': '',
     },
     packages=setuptools.find_packages(),
-    python_requires='>=3.6',
     install_requires=['curl_cffi'],
 )

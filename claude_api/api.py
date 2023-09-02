@@ -1,8 +1,8 @@
 from random import randint
 from typing import Literal
-from utils.funcs import join_url
-from utils.web import make_delete_request, make_get_request, make_post_request, handle_response
-from utils.funcs import make_uuid
+from .funcs import join_url
+from .web import make_delete_request, make_get_request, make_post_request, handle_response
+from .funcs import make_uuid
 import json
 from curl_cffi import requests as requests_fake
 

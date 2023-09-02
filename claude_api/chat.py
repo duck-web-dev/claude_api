@@ -1,4 +1,4 @@
-from utils.funcs import make_uuid
+from .funcs import make_uuid
 
 
 class Message:

@@ -1,6 +1,6 @@
 import logging
-import utils.api as api
-import utils.chat as chat
+from . import api
+from . import chat
 
 logging.basicConfig()
 
