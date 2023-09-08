@@ -33,7 +33,7 @@ def make_get_request(url: str, _cookie: str = '', _headers: 'dict[str, str]' = h
 	h = {}
 	h.update(_headers)
 	h['Cookie'] = _cookie
-	response = requests.get(url, headers=h)
+	response = requests.get(url, headers=h, timeout=60*5)
 	return handle_response(response)
 def make_delete_request(url: str, _cookie: str = '', data: str = '', _headers: 'dict[str, str]' = headers) -> 'dict | str':
 	h = {}
@@ -47,5 +47,5 @@ def make_post_request(url: str, data: dict, _cookie: str = '', _headers: 'dict[s
 	h.update(_headers)
 	h['Cookie'] = _cookie
 	# data = json.dumps(data)
-	response = requests.post(url, json=data, headers=h, timeout=500)
+	response = requests.post(url, json=data, headers=h, timeout=60*5)
 	return handle_response(response)
