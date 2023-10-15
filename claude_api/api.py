@@ -82,7 +82,8 @@ def send_message(org_id: str, chat_id: str, text: str, api_key: str):
 		headers = {
 			"Cookie": f"sessionKey={api_key}",
 			"Referer": f"https://claude.ai/chat/{chat_id}"
-		}
+		},
+		timeout = 60 * 5  # Seems like `curl_cffi` library has default timeout of 30s
 	)
 	handle_response(res)  # Check for errors
 	text = ''
