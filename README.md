@@ -12,11 +12,15 @@ Delivers an easy way to interact with the free Claude AI API.
 
 ## 🤔 Usage
 
-Use the api key from cookies.
+Use the api key ("sessionKey") from cookies:
+<details><summary>Example from Chrome DevTools</summary><img src="https://github.com/duck-web-dev/claude_api/assets/128974262/3790f2bd-f17d-492a-9e8d-a7ed7360ce0d"></details>
 
-`from claude_api import ClaudeClient`
+Then use it to create `ClaudeClient`:
 
-`client = ClaudeClient(api_key="YOUR_API_KEY")`
+```
+from claude_api import ClaudeClient
+client = ClaudeClient(api_key="YOUR_API_KEY")
+```
 
 
 ### List chats
